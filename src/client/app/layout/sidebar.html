@@ -1,0 +1,25 @@
+<div ng-controller="SidebarController as vm">
+    <ht-sidebar when-done-animating="vm.sidebarReady()">
+        <div class="sidebar-filler"></div>
+        <div class="sidebar-dropdown"><a href="#">Menu</a></div>
+        <div class="sidebar-inner">
+            <div class="sidebar-widget"></div>
+            <ul class="navi">
+                <!--li class="nlightblue fade-selection-animation" ng-class="vm.isCurrent(r)"
+                    ng-repeat="r in vm.navRoutes">
+                    <a ui-sref="{{r.name}}"
+                       ng-bind-html="r.settings.content"></a>
+                </li-->
+                <li class="nlightblue fade-selection-animation">
+                    <a href="/">Home</a>
+                </li>
+                <li class="nlightblue fade-selection-animation" ng-repeat="category in categories">
+                    <a href="/category/{{category.id}}">{{category.name}}</a>
+                </li>
+                <li class="nlightblue fade-selection-animation">
+                    <a href="/tags">Tags</a>
+                </li>
+            </ul>
+        </div>
+    </ht-sidebar>
+</div>

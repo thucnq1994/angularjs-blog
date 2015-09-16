@@ -1,0 +1,52 @@
+<section class="mainbar">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row" ng-repeat="post in vm.posts">
+                        <div class="col-md-12">
+                            <a href="/detail/{{post.id}}"><h3>{{post.title}}</h3></a>
+                            <div class="entry-meta">
+                                <span class="byline">By
+                                    <span class="author vcard">
+                                        <a class="url fn n" href="javascript:void(0)" title="View all posts by {{post.author}}">{{post.author}}</a>
+                                    </span>
+                                </span>
+                            </div>
+                            <img src="{{post.thumbnail}}" style="width:100%">
+                            <p>
+                                {{post.description}}
+                            </p>
+                            <a class="btn btn-primary pull-right" href="/detail/{{post.id}}">Read more <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row text-center">
+                        <div class="col-lg-12">
+                            <ul class="pagination">
+                                <li ng-repeat="n in vm.pagination()">
+                                    <a href="/page/{{n}}">{{n}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <aside id="text-3" class="widget widget_text">
+                        <div class="textwidget">
+                            <a href="javascript:void(0)"><img src="http://www.stablehost.com/images/banner40-2.gif" target="_blank" border="0"></a>
+                        </div>
+                    </aside>
+                    <div class="widget wblue">
+                        <div ht-widget-header title="Tag"></div>
+                        <div class="widget-content">
+                            <p>Angular JS</p>
+                            <p>Node JS</p>
+                            <p>AngularJS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

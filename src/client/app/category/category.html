@@ -1,0 +1,35 @@
+<section class="mainbar">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wblue">
+                    <div ht-widget-header title="{{vm.category.name}}"></div>
+                    <div class="widget-content">
+                        <div class="row" ng-repeat="post in vm.posts">
+                            <div class="col-md-3">
+                                <img src="{{post.thumbnail}}" style="width: 100%">
+                            </div>
+                            <div class="col-md-9">
+                                <a href="/detail/{{post.id}}"><h3>{{post.title}}</h3></a>
+                                <p>{{post.description}}</p>
+                                <a class="btn btn-primary pull-right" href="/detail/{{post.id}}">Read more <span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="row text-center">
+                            <div class="col-lg-12">
+                                <ul class="pagination">
+                                    <li ng-repeat="n in vm.pagination()">
+                                        <a href="/category/{{vm.categoryId}}/{{n}}">{{n}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
